@@ -3,6 +3,7 @@ import random
 userName = ""
 #       ITERATION 2 Start
 def menu(gameChoice):
+    
     userName = input("What is your name? ")
     while True:
         
@@ -73,6 +74,8 @@ difThree = "Uncompleted"
 difFour = "Uncompleted"
 
 def gameOne():      #Game One Start
+
+    global userName
     global difOne
     global difTwo
     global difThree
@@ -121,14 +124,14 @@ def gameOne():      #Game One Start
                 else:
                     print(f"You won in {maxGuess - guess} guesses ")
                     difOne = "Completed"
-                    while leaving != "1" and leaving != "2":
-                        print("1: Continue")
-                        print("2: Leave")
-                        leaving = input("Continue or Leave?")
-                    if leaving == 1:
-                        gameOne()
-                    else:
-                        menu()
+                while leaving != "1" and leaving != "2":
+                    print("1: Continue")
+                    print("2: Leave")
+                    leaving = input("Continue or Leave?")
+                if leaving == 1:
+                    gameOne()
+                else:
+                    menu()
                                               
             except ValueError:
                 print("Invalid")
@@ -212,6 +215,13 @@ def gameOne():      #Game One Start
         gameChoice = 0
         menu(gameChoice)
 
+def gameTwo():
+    
+
+
+
+gameChoice = 0
+menu(gameChoice)
 
 gameChoice = 0
 menu(gameChoice)
